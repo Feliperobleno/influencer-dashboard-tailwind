@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="theme-color" content="#f4f5f2">
+		<title>Resumen de rendimiento | Dashboard de influencer</title>
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+	</head>
+	<body class="min-h-screen overflow-x-hidden bg-[#f4f5f2] text-zinc-950 antialiased">
+		<div class="min-h-screen lg:grid lg:grid-cols-[230px_minmax(0,1fr)]">
+			<!-- La navegación pasa de barra superior en móvil a rail fijo en escritorio. -->
+			<aside class="border-b border-zinc-200 bg-white lg:border-b-0 lg:border-r">
+				<div class="flex items-center justify-between px-5 py-4 sm:px-7 lg:sticky lg:top-0 lg:h-screen lg:flex-col lg:items-stretch lg:justify-start lg:px-6 lg:py-8">
+					<a href="#inicio" class="flex items-center gap-3" aria-label="Dashboard de influencer, inicio">
+						<span class="grid size-10 place-items-center rounded-xl bg-emerald-950 font-serif text-xl text-white">L</span>
+						<span>
+							<span class="block text-sm font-semibold">Dashboard de influencer</span>
+							<span class="block text-xs text-zinc-500">Panel de rendimiento</span>
+						</span>
+					</a>
+					<nav aria-label="Navegación principal" class="flex items-center gap-1 sm:gap-2 lg:mt-12 lg:flex-col lg:items-stretch">
+						<a href="#resumen" aria-current="page" class="rounded-lg bg-emerald-950 px-3 py-2 text-xs font-medium text-white sm:px-4 sm:text-sm lg:px-3">Resumen</a>
+						<a href="#productos" class="rounded-lg px-3 py-2 text-xs font-medium text-zinc-600 hover:bg-zinc-100 sm:px-4 sm:text-sm lg:px-3">Productos</a>
+						<a href="#conversiones" class="rounded-lg px-3 py-2 text-xs font-medium text-zinc-600 hover:bg-zinc-100 sm:px-4 sm:text-sm lg:px-3">Conversiones</a>
+					</nav>
+					<div class="hidden lg:mt-auto lg:block">
+						<div class="rounded-xl bg-emerald-50 p-4">
+							<p class="text-xs font-semibold uppercase text-emerald-900">Comisión activa</p>
+							<p class="mt-2 font-serif text-3xl text-emerald-950">15%</p>
+							<p class="mt-1 text-xs leading-5 text-emerald-900/75">En cada venta confirmada</p>
+						</div>
+					</div>
+				</div>
+			</aside>
+
+			<main id="inicio" class="min-w-0">
+				<div class="mx-auto max-w-[1440px] px-4 pb-10 pt-6 sm:px-7 sm:pt-8 md:px-8 lg:px-10 lg:pt-10">
+					<header class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+						<div>
+							<p class="text-xs font-semibold uppercase text-emerald-800">Tu negocio, en perspectiva</p>
+							<h1 class="mt-2 font-serif text-3xl leading-tight sm:text-4xl">Resumen de rendimiento</h1>
+							<p class="mt-2 text-sm text-zinc-500">Resultados del 1 al 14 de octubre de 2026</p>
+						</div>
+						<div class="flex w-fit items-center gap-2 rounded-lg border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-700">
+							<span class="size-2 rounded-full bg-emerald-600" aria-hidden="true"></span>
+							Periodo actual
+						</div>
+					</header>
+
+					<section id="resumen" aria-labelledby="kpis-title" class="mt-8 sm:mt-10">
+						<div class="mb-4 flex items-baseline justify-between gap-3">
+							<h2 id="kpis-title" class="text-sm font-semibold">En cifras</h2>
+							<p class="text-xs text-zinc-500">Acumulado del periodo</p>
+						</div>
+						<!-- Una columna en móvil, dos desde sm y tres KPI desde lg. -->
+						<div class="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
+							<article class="rounded-xl bg-emerald-950 p-5 text-white sm:p-6">
+								<p class="text-sm text-emerald-100">Comisión generada</p>
+								<p class="mt-4 font-serif text-4xl">486 €</p>
+								<p class="mt-3 text-xs text-emerald-100">15% de 3.240 € en ventas</p>
+							</article>
+							<article class="rounded-xl border border-zinc-200 bg-white p-5 sm:p-6">
+								<p class="text-sm text-zinc-500">Ventas atribuidas</p>
+								<p class="mt-4 font-serif text-4xl">3.240 €</p>
+								<p class="mt-3 text-xs text-zinc-500">42 compras confirmadas</p>
+							</article>
+							<article class="rounded-xl border border-zinc-200 bg-white p-5 sm:col-span-2 sm:p-6 lg:col-span-1">
+								<p class="text-sm text-zinc-500">Compras confirmadas</p>
+								<p class="mt-4 font-serif text-4xl">42</p>
+								<p class="mt-3 text-xs text-zinc-500">Ticket medio de 77,14 €</p>
+							</article>
+						</div>
+					</section>
+
+					<section aria-labelledby="drivers-title" class="mt-9 sm:mt-11">
+						<div class="mb-4 flex items-baseline justify-between gap-3">
+							<h2 id="drivers-title" class="text-sm font-semibold">Qué impulsa el resultado</h2>
+							<p class="text-xs text-zinc-500">3 indicadores clave</p>
+						</div>
+						<!-- Los drivers se apilan en móvil, forman dos columnas en sm y tres en lg. -->
+						<div class="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
+							<article class="rounded-xl border border-zinc-200 bg-white p-5 sm:p-6">
+								<div class="flex items-center justify-between gap-3">
+									<h3 class="text-sm font-semibold">Conversión</h3>
+									<span class="rounded-full bg-sky-100 px-2.5 py-1 text-xs font-medium text-sky-900">Tráfico</span>
+								</div>
+								<p class="mt-5 font-serif text-3xl">3,5%</p>
+								<p class="mt-1 text-sm text-zinc-500">42 compras por cada 1.200 clics</p>
+								<div class="mt-5 h-2 overflow-hidden rounded-full bg-zinc-100" role="img" aria-label="Conversión del 3,5 por ciento">
+									<div class="h-full w-[35%] rounded-full bg-sky-700"></div>
+								</div>
+								<p class="mt-2 text-xs text-zinc-500">Objetivo de referencia: 10%</p>
+							</article>
+							<article class="rounded-xl border border-zinc-200 bg-white p-5 sm:p-6">
+								<div class="flex items-center justify-between gap-3">
+									<h3 class="text-sm font-semibold">Mezcla de ventas</h3>
+									<span class="rounded-full bg-orange-100 px-2.5 py-1 text-xs font-medium text-orange-900">Producto</span>
+								</div>
+								<p class="mt-5 font-serif text-3xl">A lidera</p>
+								<p class="mt-1 text-sm text-zinc-500">20 de 42 compras · 47,6%</p>
+								<div class="mt-5 flex h-2 overflow-hidden rounded-full bg-zinc-100" role="img" aria-label="Distribución: A 47,6%, B 28,6%, C 23,8%">
+									<span class="h-full w-[47.6%] bg-orange-600"></span>
+									<span class="h-full w-[28.6%] bg-sky-700"></span>
+									<span class="h-full w-[23.8%] bg-emerald-700"></span>
+								</div>
+								<p class="mt-2 text-xs text-zinc-500">A 20 · B 12 · C 10 compras</p>
+							</article>
+							<article class="rounded-xl border border-zinc-200 bg-white p-5 sm:col-span-2 sm:p-6 lg:col-span-1">
+								<div class="flex items-center justify-between gap-3">
+									<h3 class="text-sm font-semibold">Meta de comisión</h3>
+									<span class="rounded-full bg-emerald-100 px-2.5 py-1 text-xs font-medium text-emerald-900">Octubre</span>
+								</div>
+								<p class="mt-5 font-serif text-3xl">81%</p>
+								<p class="mt-1 text-sm text-zinc-500">486 € de una meta de 600 €</p>
+								<div class="mt-5 h-2 overflow-hidden rounded-full bg-zinc-100" role="img" aria-label="81 por ciento de la meta mensual">
+									<div class="h-full w-[81%] rounded-full bg-emerald-700"></div>
+								</div>
+								<p class="mt-2 text-xs text-zinc-500">114 € para alcanzar la meta</p>
+							</article>
+						</div>
+					</section>
+
+					<section aria-labelledby="operativa-title" class="mt-9 sm:mt-11">
+						<div class="mb-4">
+							<h2 id="operativa-title" class="text-sm font-semibold">Seguimiento operativo</h2>
+							<p class="mt-1 text-xs text-zinc-500">Rendimiento por producto y actividad reciente</p>
+						</div>
+						<div class="grid min-w-0 grid-cols-1 gap-4 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)]">
+							<section id="productos" aria-labelledby="productos-title" class="min-w-0 rounded-xl border border-zinc-200 bg-white">
+								<div class="flex items-start justify-between gap-3 px-5 py-5 sm:px-6">
+									<div>
+										<h3 id="productos-title" class="text-sm font-semibold">Rendimiento por producto</h3>
+										<p class="mt-1 text-xs text-zinc-500">Comisión calculada al 15%</p>
+									</div>
+									<span class="rounded-full bg-zinc-100 px-2.5 py-1 text-xs text-zinc-600">42 compras</span>
+								</div>
+								<!-- Tarjetas legibles en móvil; la tabla detallada se reserva para md en adelante. -->
+								<div class="grid gap-3 px-4 pb-4 md:hidden">
+									<article class="rounded-lg border border-zinc-200 bg-white p-4" aria-labelledby="producto-a-title">
+										<div class="flex items-start justify-between gap-3">
+											<h4 id="producto-a-title" class="text-sm font-semibold"><span class="mr-2 inline-block size-2 rounded-full bg-orange-600"></span>Producto A</h4>
+											<p class="shrink-0 text-sm font-medium">50 €<span class="text-xs font-normal text-zinc-500"> / venta</span></p>
+										</div>
+										<dl class="mt-4 grid grid-cols-3 gap-2">
+											<div><dt class="text-xs text-zinc-500">Ventas</dt><dd class="mt-1 text-sm font-medium">20</dd></div>
+											<div><dt class="text-xs text-zinc-500">Importe</dt><dd class="mt-1 text-sm font-medium">1.000 €</dd></div>
+											<div><dt class="text-xs text-zinc-500">Comisión</dt><dd class="mt-1 text-sm font-medium">150 €</dd></div>
+										</dl>
+									</article>
+									<article class="rounded-lg border border-zinc-200 bg-white p-4" aria-labelledby="producto-b-title">
+										<div class="flex items-start justify-between gap-3">
+											<h4 id="producto-b-title" class="text-sm font-semibold"><span class="mr-2 inline-block size-2 rounded-full bg-sky-700"></span>Producto B</h4>
+											<p class="shrink-0 text-sm font-medium">120 €<span class="text-xs font-normal text-zinc-500"> / venta</span></p>
+										</div>
+										<dl class="mt-4 grid grid-cols-3 gap-2">
+											<div><dt class="text-xs text-zinc-500">Ventas</dt><dd class="mt-1 text-sm font-medium">12</dd></div>
+											<div><dt class="text-xs text-zinc-500">Importe</dt><dd class="mt-1 text-sm font-medium">1.440 €</dd></div>
+											<div><dt class="text-xs text-zinc-500">Comisión</dt><dd class="mt-1 text-sm font-medium">216 €</dd></div>
+										</dl>
+									</article>
+									<article class="rounded-lg border border-zinc-200 bg-white p-4" aria-labelledby="producto-c-title">
+										<div class="flex items-start justify-between gap-3">
+											<h4 id="producto-c-title" class="text-sm font-semibold"><span class="mr-2 inline-block size-2 rounded-full bg-emerald-700"></span>Producto C</h4>
+											<p class="shrink-0 text-sm font-medium">80 €<span class="text-xs font-normal text-zinc-500"> / venta</span></p>
+										</div>
+										<dl class="mt-4 grid grid-cols-3 gap-2">
+											<div><dt class="text-xs text-zinc-500">Ventas</dt><dd class="mt-1 text-sm font-medium">10</dd></div>
+											<div><dt class="text-xs text-zinc-500">Importe</dt><dd class="mt-1 text-sm font-medium">800 €</dd></div>
+											<div><dt class="text-xs text-zinc-500">Comisión</dt><dd class="mt-1 text-sm font-medium">120 €</dd></div>
+										</dl>
+									</article>
+									<section aria-labelledby="totales-movil-title" class="rounded-lg bg-zinc-100 p-4">
+										<h4 id="totales-movil-title" class="text-xs font-semibold uppercase text-zinc-600">Totales del periodo</h4>
+										<dl class="mt-3 grid grid-cols-3 gap-2">
+											<div><dt class="text-xs text-zinc-500">Ventas</dt><dd class="mt-1 text-sm font-semibold">42</dd></div>
+											<div><dt class="text-xs text-zinc-500">Importe</dt><dd class="mt-1 text-sm font-semibold">3.240 €</dd></div>
+											<div><dt class="text-xs text-zinc-500">Comisión</dt><dd class="mt-1 text-sm font-semibold">486 €</dd></div>
+										</dl>
+									</section>
+								</div>
+								<!-- El scroll horizontal queda confinado a esta tabla en pantallas md y mayores. -->
+								<div class="hidden min-w-0 overflow-x-auto md:block">
+									<table class="w-full min-w-[520px] border-collapse text-left text-sm">
+										<caption class="sr-only">Ventas y comisiones acumuladas por producto</caption>
+										<thead class="border-y border-zinc-100 bg-zinc-50 text-xs text-zinc-500">
+											<tr>
+												<th scope="col" class="px-5 py-3 font-medium sm:px-6">Producto</th>
+												<th scope="col" class="px-3 py-3 text-right font-medium">Precio</th>
+												<th scope="col" class="px-3 py-3 text-right font-medium">Ventas</th>
+												<th scope="col" class="px-3 py-3 text-right font-medium">Importe</th>
+												<th scope="col" class="px-5 py-3 text-right font-medium sm:px-6">Comisión</th>
+											</tr>
+										</thead>
+										<tbody class="divide-y divide-zinc-100">
+											<tr>
+												<th scope="row" class="px-5 py-4 font-medium sm:px-6"><span class="mr-2 inline-block size-2 rounded-full bg-orange-600"></span>Producto A</th>
+												<td class="px-3 py-4 text-right text-zinc-600">50 €</td>
+												<td class="px-3 py-4 text-right text-zinc-600">20</td>
+												<td class="px-3 py-4 text-right text-zinc-600">1.000 €</td>
+												<td class="px-5 py-4 text-right font-medium sm:px-6">150 €</td>
+											</tr>
+											<tr>
+												<th scope="row" class="px-5 py-4 font-medium sm:px-6"><span class="mr-2 inline-block size-2 rounded-full bg-sky-700"></span>Producto B</th>
+												<td class="px-3 py-4 text-right text-zinc-600">120 €</td>
+												<td class="px-3 py-4 text-right text-zinc-600">12</td>
+												<td class="px-3 py-4 text-right text-zinc-600">1.440 €</td>
+												<td class="px-5 py-4 text-right font-medium sm:px-6">216 €</td>
+											</tr>
+											<tr>
+												<th scope="row" class="px-5 py-4 font-medium sm:px-6"><span class="mr-2 inline-block size-2 rounded-full bg-emerald-700"></span>Producto C</th>
+												<td class="px-3 py-4 text-right text-zinc-600">80 €</td>
+												<td class="px-3 py-4 text-right text-zinc-600">10</td>
+												<td class="px-3 py-4 text-right text-zinc-600">800 €</td>
+												<td class="px-5 py-4 text-right font-medium sm:px-6">120 €</td>
+											</tr>
+										</tbody>
+										<tfoot class="border-t border-zinc-200 bg-zinc-50">
+											<tr>
+												<th scope="row" class="px-5 py-4 text-xs font-semibold sm:px-6">Total</th>
+												<td class="px-3 py-4"></td>
+												<td class="px-3 py-4 text-right text-xs font-semibold">42</td>
+												<td class="px-3 py-4 text-right text-xs font-semibold">3.240 €</td>
+												<td class="px-5 py-4 text-right text-xs font-semibold sm:px-6">486 €</td>
+											</tr>
+										</tfoot>
+									</table>
+								</div>
+								<p class="px-5 py-4 text-xs text-zinc-500 sm:px-6">Los importes incluyen todas las compras confirmadas del periodo.</p>
+							</section>
+
+							<section id="conversiones" aria-labelledby="conversiones-title" class="min-w-0 rounded-xl border border-zinc-200 bg-white">
+								<div class="flex items-start justify-between gap-3 px-5 py-5 sm:px-6">
+									<div>
+										<h3 id="conversiones-title" class="text-sm font-semibold">Conversiones recientes</h3>
+										<p class="mt-1 text-xs text-zinc-500">Últimas compras confirmadas</p>
+									</div>
+									<span class="rounded-full bg-emerald-100 px-2.5 py-1 text-xs font-medium text-emerald-900">Confirmadas</span>
+								</div>
+								<!-- Las filas usan un listado adaptable para evitar ensanchar la vista en móvil. -->
+								<ul class="divide-y divide-zinc-100" aria-label="Cinco conversiones recientes">
+									<li class="flex items-center justify-between gap-3 px-5 py-4 sm:px-6">
+										<div class="min-w-0"><p class="truncate text-sm font-medium">Producto B</p><p class="mt-1 text-xs text-zinc-500">14 oct · Compra #1042</p></div>
+										<div class="shrink-0 text-right"><p class="text-sm font-medium">120 €</p><p class="mt-1 text-xs text-emerald-800">+18 € comisión</p></div>
+									</li>
+									<li class="flex items-center justify-between gap-3 px-5 py-4 sm:px-6">
+										<div class="min-w-0"><p class="truncate text-sm font-medium">Producto A</p><p class="mt-1 text-xs text-zinc-500">14 oct · Compra #1041</p></div>
+										<div class="shrink-0 text-right"><p class="text-sm font-medium">50 €</p><p class="mt-1 text-xs text-emerald-800">+7,50 € comisión</p></div>
+									</li>
+									<li class="flex items-center justify-between gap-3 px-5 py-4 sm:px-6">
+										<div class="min-w-0"><p class="truncate text-sm font-medium">Producto C</p><p class="mt-1 text-xs text-zinc-500">13 oct · Compra #1040</p></div>
+										<div class="shrink-0 text-right"><p class="text-sm font-medium">80 €</p><p class="mt-1 text-xs text-emerald-800">+12 € comisión</p></div>
+									</li>
+									<li class="flex items-center justify-between gap-3 px-5 py-4 sm:px-6">
+										<div class="min-w-0"><p class="truncate text-sm font-medium">Producto A</p><p class="mt-1 text-xs text-zinc-500">13 oct · Compra #1039</p></div>
+										<div class="shrink-0 text-right"><p class="text-sm font-medium">50 €</p><p class="mt-1 text-xs text-emerald-800">+7,50 € comisión</p></div>
+									</li>
+									<li class="flex items-center justify-between gap-3 px-5 py-4 sm:px-6">
+										<div class="min-w-0"><p class="truncate text-sm font-medium">Producto B</p><p class="mt-1 text-xs text-zinc-500">12 oct · Compra #1038</p></div>
+										<div class="shrink-0 text-right"><p class="text-sm font-medium">120 €</p><p class="mt-1 text-xs text-emerald-800">+18 € comisión</p></div>
+									</li>
+								</ul>
+								<p class="border-t border-zinc-100 px-5 py-4 text-xs text-zinc-500 sm:px-6">Estas 5 compras forman parte del total del periodo.</p>
+							</section>
+						</div>
+					</section>
+
+					<footer class="mt-8 border-t border-zinc-200 pt-4 text-xs text-zinc-500">
+						<p>Datos de demostración · Comisión calculada sobre el precio de cada producto.</p>
+					</footer>
+				</div>
+			</main>
+		</div>
+	</body>
+</html>
